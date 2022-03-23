@@ -21,4 +21,5 @@ Classes are implemented using the class keyword
 - Access Modifiers
 - Heritage
 - Interfaces
-
+- Generics
+- Singletons
