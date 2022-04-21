@@ -312,3 +312,26 @@ singleton1.name = 'Nathan';
 
 const singleton2 = Singleton.getInstance();
 //console.log(singleton2.name); // we get the name property of the singleton1 instance
+
+
+/*
+=========================================================
+FACTORY PATTERN IN TYPESCRIPT
+with the factory pattern we can create a class with multiple instances of the same class
+*/
+
+class UserClassFactory {
+     public name: string;
+     public age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }   
+}
+
+function createUserFactory(name: string, age: number) {
+    return new UserClassFactory(name, age);
+}
+
+const userFactory1 = createUserFactory('Nathan', 30); // intead of creating a new instance of the class, we can call the factory function to create a new instance
